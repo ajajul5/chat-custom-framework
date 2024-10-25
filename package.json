@@ -1,0 +1,37 @@
+{
+  "name": "tap2crack-chat-websocket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start ecosystem.config.js --env local",
+    "dev": "nodemon server.js",
+    "prod": "pm2 start ecosystem.config.js --env production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@bugsnag/js": "^8.0.0",
+    "@bugsnag/plugin-express": "^8.0.0",
+    "@socket.io/redis-adapter": "^8.3.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mysql2": "^3.11.0",
+    "oauth2-server": "^3.1.1",
+    "pm2": "^5.4.2",
+    "redis": "^4.7.0",
+    "sequelize": "^6.37.3",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

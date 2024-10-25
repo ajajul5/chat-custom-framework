@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+- source: ./
+  destination: /opt/release-chat-websocket/
+hooks:
+  BeforeInstall:
+  - location: scripts/beforeInstall.bash
+  AfterInstall:
+  - location: scripts/afterInstall.bash
