@@ -1,15 +1,15 @@
 const { Sequelize } = require('sequelize')
 
-const sequelize = new Sequelize(process.env.DB_DATABASE, null, null, {
+const sequelize = new Sequelize('db_chat', null, null, {
     // host: process.env.DB_HOST,
     replication: {
         read: [
-          { host: process.env.DB_READ_HOST, username: process.env.DB_READ_USERNAME, password: process.env.DB_READ_PASSWORD }
+          { host: 'localhost', username: 'ajajul', password: '123456' }
         ],
-        write: { host: process.env.DB_WRITE_HOST, username: process.env.DB_WRITE_USERNAME, password: process.env.DB_WRITE_PASSWORD }
+        write: { host: 'localhost', username: 'ajajul', password: '123456' }
     },
-    dialect: process.env.DB_CONNECTION,
-    port: process.env.DB_PORT,
+    dialect: 'mysql',
+    port: '3306',
     logging: false, // Set to console.log to see the raw SQL queries
 })
 
