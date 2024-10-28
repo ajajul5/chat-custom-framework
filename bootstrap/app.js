@@ -22,11 +22,6 @@ const bugsnagClient = bugsnag.start({
 const bugsnagMiddleware = bugsnagClient.getPlugin('express');
 app.use(bugsnagMiddleware.requestHandler);
 
-// Check if .env file exists
-if (!fs.existsSync(envFilePath)) {
-  console.error(`.env file not found at path: ${envFilePath}`)
-  process.exit(1) // Exit the process if .env is missing
-}
 app.use(cors());
 const { appPort } = require('../config/app')
 const server = app.listen(appPort, () => console.log(`Chat server on port ${appPort}`))

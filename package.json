@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start ecosystem.config.js --env local",
-    "dev": "nodemon server.js",
-    "prod": "pm2 start ecosystem.config.js --env production"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "prod": "node server.js"
   },
   "keywords": [],
   "author": "",
