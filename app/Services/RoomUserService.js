@@ -62,13 +62,13 @@ class RoomUserService {
         // console.log('isRoomUserExist', isRoomUserExist)
 
         // if(!isRoomUserExist) {
-            const newRoomUser = await RoomUserRepository.create({
+            const newRoomUser = {
                 room_user_reference_number : 'RURN'+UtilHelper.generateString(),
                 room_reference_number : 'RMRN21759276283ZG2BX',
                 user_reference_number : payload.userReferenceNumber,
                 display_name : payload.attributes.display_name,
                 user_revoked : '0',
-            })
+            }
             response.data['room_user'] = newRoomUser
         // } else {
         //     response.data['room_user'] = isRoomUserExist
